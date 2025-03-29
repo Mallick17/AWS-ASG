@@ -157,6 +157,7 @@ This detailed exploration of creating an Auto Scaling Group (ASG) in AWS is desi
 - Automatic scaling policies reduce manual intervention, maintaining performance during traffic changes, with warmup preventing over-scaling.
 - Maintenance policies balance availability and cost, crucial for applications with strict uptime needs.
 - Protection and monitoring enhance reliability and visibility, ensuring the ASG operates smoothly and can be audited.
+![Create-Auto-Scaling-group-EC2-ap-south-1-Step-4 0](https://github.com/user-attachments/assets/0f646ff7-381b-4c2b-abcb-b76c69d2e715)
 
 #### Step 5: Add Notifications
 
@@ -175,6 +176,7 @@ This detailed exploration of creating an Auto Scaling Group (ASG) in AWS is desi
 **Why it’s used:**
 - Notifications keep teams informed, enabling quick responses to issues, like investigating failed launches.
 - Covering all event types ensures comprehensive monitoring, reducing blind spots in ASG management.
+![Create-Auto-Scaling-group-EC2-ap-south-1-Step-5 0](https://github.com/user-attachments/assets/5690fd6c-1c05-4f43-9a95-4beec11427e7)
 
 #### Step 6: Add Tags
 
@@ -193,6 +195,7 @@ This detailed exploration of creating an Auto Scaling Group (ASG) in AWS is desi
 **Why it’s used:**
 - Tags simplify resource management, especially in large environments, for cost allocation and automation.
 - Applying to instances ensures all related resources are tagged, enhancing visibility and governance.
+![Create-Auto-Scaling-group-EC2-ap-south-1-Step-6 0](https://github.com/user-attachments/assets/79842a46-a8f2-4e77-be80-d6ed54631883)
 
 #### Step 7: Review
 
@@ -209,10 +212,8 @@ This detailed exploration of creating an Auto Scaling Group (ASG) in AWS is desi
 **Why it’s used:**
 - Prevents errors by verifying settings, saving time and resources, especially in production environments.
 - Ensures alignment with requirements, like ensuring load balancer integration is set up correctly.
+![Create-Auto-Scaling-group-EC2-ap-south-1-Step-7 0](https://github.com/user-attachments/assets/5a04c70f-d056-4d8f-bafe-213f54ddd7c5)
 
-This comprehensive guide covers all settings in the ASG creation process, equipping you to explain each step confidently to DevOps seniors, addressing potential questions on scalability, cost, and reliability.
 
-**Key Citations:**
-- [Auto Scaling groups Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
-- [Tutorial Create your first Auto Scaling group Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-your-first-auto-scaling-group.html)
-- [Create and Configure the Auto Scaling Group in EC2 GeeksforGeeks](https://www.geeksforgeeks.org/create-and-configure-the-auto-scaling-group-in-ec2/)
+
+
