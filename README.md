@@ -1,9 +1,4 @@
 # Componenets of Auto Scaling Group
-### Key Points
-- It seems likely that creating an AWS Auto Scaling Group (ASG) involves several steps, each with specific components to manage EC2 instances automatically.
-- Research suggests that settings like launch template, network configuration, and scaling policies are crucial for scalability and cost efficiency.
-- The evidence leans toward integrating with load balancers and health checks enhancing availability, while notifications and tags aid in monitoring and management.
-
 ### Launch Template Configuration
 When setting up an ASG, you start by choosing a launch template, which defines how EC2 instances are configured, like the operating system and instance type. This ensures all instances are consistent, making management easier.
 
@@ -21,8 +16,8 @@ Optionally, add notifications for events like instance launches and tags for org
 
 ---
 
-## Comprehensive Explanation of AWS Auto Scaling Group Creation Components
-### Step 1: Choose Launch Template
+# Comprehensive Explanation of AWS Auto Scaling Group Creation Components
+## Step 1: Choose Launch Template
 
 **Component: Auto Scaling Group Name**
 - **What it is:** A unique identifier for the ASG within your AWS account and region, limited to 255 characters.
@@ -39,7 +34,7 @@ Optionally, add notifications for events like instance launches and tags for org
 - **Why it's used:** Allows for controlled updates and ensures the ASG uses the intended configuration, preventing unintended changes from newer versions.
 - **How it works:** Chosen via a dropdown, with an edit icon to modify if needed, ensuring stability in production environments.
 
-### Step 2: Choose Instance Launch Options
+## Step 2: Choose Instance Launch Options
 
 **Component: Instance Type Requirements**
 - **What it is:** Options to use the instance type from the launch template (e.g., `t2.micro`) or override with specific attributes (vCPUs, memory) or manually add instance types (e.g., `t2.small`).
@@ -61,7 +56,7 @@ Optionally, add notifications for events like instance launches and tags for org
 - **Why it's used:** Ensures instances are launched in the correct network environment and are distributed for high availability, mitigating zone failures.
 - **How it works:** Selected via dropdowns and checkboxes, with warnings if instance types are unavailable in certain zones (e.g., `t2.micro` not in one zone), prompting adjustments.
 
-### Step 3: Integrate with Other Services
+## Step 3: Integrate with Other Services
 
 **Component: Load Balancing**
 - **What it is:** Option to attach the ASG to an existing load balancer or create a new one (e.g., Application Load Balancer "mallow-1," internal scheme, port 80, target group "mallow-1").
@@ -78,7 +73,7 @@ Optionally, add notifications for events like instance launches and tags for org
 - **Why it's used:** Maintains application availability by ensuring only healthy instances serve traffic, reducing downtime.
 - **How it works:** EC2 checks are always enabled, with optional checks (e.g., ELB, EBS) via checkboxes, and a customizable grace period to allow initialization before health checks.
 
-### Step 4: Configure Group Size and Scaling
+## Step 4: Configure Group Size and Scaling
 
 **Component: Group Size**
 - **What it is:** Settings for desired capacity (e.g., 1 instance), minimum (e.g., 1), and maximum (e.g., 2) number of instances, with options for units or vCPUs/memory.
@@ -95,7 +90,7 @@ Optionally, add notifications for events like instance launches and tags for org
 - **Why it's used:** Balances availability and cost during instance replacements, crucial for applications with uptime needs.
 - **How it works:** Selected via radio buttons, with custom options for minimum and maximum healthy percentages, affecting scaling behavior.
 
-### Step 5: Add Notifications
+## Step 5: Add Notifications
 
 **Component: SNS Topic**
 - **What it is:** Configuration to send notifications via Amazon Simple Notification Service (SNS) for ASG events, such as launches or terminations.
@@ -107,14 +102,14 @@ Optionally, add notifications for events like instance launches and tags for org
 - **Why it's used:** Customizes which events are important for monitoring, reducing noise from irrelevant alerts.
 - **How it works:** Configured via checkboxes, allowing flexibility in notification scope.
 
-### Step 6: Add Tags
+## Step 6: Add Tags
 
 **Component: Tags**
 - **What it is:** Key-value pairs (e.g., Key: "Environment", Value: "Production") to label the ASG and optionally the instances.
 - **Why it's used:** Organizes and manages resources, aiding in cost allocation, automation, and filtering in large environments.
 - **How it works:** Entered in fields, with a checkbox to tag new instances, ensuring consistency across resources, with warnings about potential overrides from launch templates.
 
-### Step 7: Review
+## Step 7: Review
 
 **Component: Review Configurations**
 - **What it is:** Summary of all settings configured in previous steps, such as launch template, network, load balancing, scaling policies, notifications, and tags.
