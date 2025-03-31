@@ -16,7 +16,7 @@ Optionally, add notifications for events like instance launches and tags for org
 
 ---
 
-# Comprehensive Explanation of AWS Auto Scaling Group Creation Components
+# AWS Auto Scaling Group Creation Components
 ## Step 1: Choose Launch Template
 
 **Component: Auto Scaling Group Name**
